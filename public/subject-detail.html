@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi tiết môn học - CodeDthu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span>CodeDthu<br><small>Hệ thống tổng hợp và luyện tập bài tập lập trình cho sinh viên Dthu</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Trang chủ</a>
+      <a href="subjects.html">Môn học</a>
+      <a href="about.html">Giới thiệu</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="darkModeToggle" title="Chế độ tối"><i class="fa-solid fa-moon"></i></button>
+      <button class="menu-toggle" id="menuToggle" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= THÔNG TIN MÔN HỌC ============================= -->
+<section class="detail-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Trang chủ</a><span class="sep">/</span>
+      <a href="subjects.html">Môn học</a><span class="sep">/</span>
+      <span id="breadcrumbSubject">...</span>
+    </div>
+    <div class="detail-top" id="subjectDetailTop">
+      <!-- Nội dung được render bằng JS -->
+    </div>
+
+    <div class="info-grid" id="subjectInfoGrid"></div>
+  </div>
+</section>
+
+<main class="section">
+  <div class="container">
+    <div class="list-layout">
+
+      <!-- ============================= BỘ LỌC BÀI TẬP ============================= -->
+      <aside class="filter-panel">
+        <h3><i class="fa-solid fa-sliders"></i> Lọc bài tập</h3>
+
+        <div class="filter-group">
+          <label class="filter-label" for="fSearch">Tìm bài tập</label>
+          <input type="text" id="fSearch" placeholder="Nhập tên bài tập...">
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Độ khó</label>
+          <div class="chip-group" id="fDifficulty">
+            <button class="chip active" data-value="">Tất cả</button>
+            <button class="chip" data-value="Dễ">Dễ</button>
+            <button class="chip" data-value="Trung bình">Trung bình</button>
+            <button class="chip" data-value="Khó">Khó</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="fTopic">Chủ đề</label>
+          <select id="fTopic"><option value="">Tất cả chủ đề</option></select>
+        </div>
+
+        <button class="btn btn-outline btn-block btn-sm" id="resetFilters">
+          <i class="fa-solid fa-rotate-left"></i> Đặt lại bộ lọc
+        </button>
+      </aside>
+
+      <!-- ============================= DANH SÁCH BÀI TẬP ============================= -->
+      <div>
+        <div class="toolbar">
+          <span class="result-count" id="resultCount">0 bài tập</span>
+          <div class="sort-control">
+            <label for="sortSelect">Sắp xếp:</label>
+            <select id="sortSelect">
+              <option value="name">Tên (A-Z)</option>
+              <option value="difficulty">Mức độ</option>
+              <option value="newest">Mới nhất</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="exercise-list" id="exerciseGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+          <i class="fa-solid fa-inbox"></i>
+          <p>Không có bài tập nào phù hợp với bộ lọc.</p>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>CodeDthu</h4>
+        <p>Hệ thống tổng hợp và luyện tập bài tập lập trình dành cho sinh viên Dthu, giúp bạn ôn tập theo môn học.</p>
+      </div>
+      <div>
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="subjects.html">Danh sách môn học</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Môn học khác</h4>
+        <ul>
+          <li><a href="subject-detail.html?id=java">Java</a></li>
+          <li><a href="subject-detail.html?id=oop">Lập trình hướng đối tượng</a></li>
+          <li><a href="subject-detail.html?id=network">Mạng máy tính</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CodeDthu — Đồ án thuyết trình môn học.</span>
+      <span>Xây dựng bằng HTML · CSS · JavaScript thuần</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/subject-detail.js"></script>
+</body>
+</html>

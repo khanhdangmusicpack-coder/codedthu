@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danh sách môn học - CodeDthu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span>CodeDthu<br><small>Hệ thống tổng hợp và luyện tập bài tập lập trình cho sinh viên Dthu</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Trang chủ</a>
+      <a href="subjects.html" class="active">Môn học</a>
+      <a href="about.html">Giới thiệu</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="darkModeToggle" title="Chế độ tối"><i class="fa-solid fa-moon"></i></button>
+      <button class="menu-toggle" id="menuToggle" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep">/</span><span id="breadcrumbCurrent">Môn học</span></div>
+    <h1 id="pageTitle">Danh sách môn học</h1>
+  </div>
+</section>
+
+<main class="section">
+  <div class="container">
+    <div class="list-layout">
+
+      <!-- ============================= BỘ LỌC ============================= -->
+      <aside class="filter-panel" id="subjectFilterPanel">
+        <h3><i class="fa-solid fa-sliders"></i> Bộ lọc môn học</h3>
+
+        <div class="filter-group">
+          <label class="filter-label" for="fSearch">Tìm theo tên môn</label>
+          <input type="text" id="fSearch" placeholder="VD: Python, SQL...">
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="fLanguage">Ngôn ngữ lập trình</label>
+          <select id="fLanguage"><option value="">Tất cả</option></select>
+        </div>
+
+        <button class="btn btn-outline btn-block btn-sm" id="resetSubjectFilters">
+          <i class="fa-solid fa-rotate-left"></i> Đặt lại bộ lọc
+        </button>
+      </aside>
+
+      <!-- ============================= NỘI DUNG CHÍNH ============================= -->
+      <div>
+        <div class="toolbar">
+          <span class="result-count" id="resultCount">15 môn học</span>
+          <div class="sort-control">
+            <label for="sortSelect">Sắp xếp:</label>
+            <select id="sortSelect">
+              <option value="name">Tên (A-Z)</option>
+              <option value="exercises">Số bài tập</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="subject-grid" id="subjectGrid"></div>
+
+        <div class="empty-state" id="emptyState" style="display:none;">
+          <i class="fa-solid fa-inbox"></i>
+          <p>Không tìm thấy kết quả phù hợp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>CodeDthu</h4>
+        <p>Hệ thống tổng hợp và luyện tập bài tập lập trình dành cho sinh viên Dthu, giúp bạn ôn tập theo môn học.</p>
+      </div>
+      <div>
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="subjects.html">Danh sách môn học</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CodeDthu — Đồ án thuyết trình môn học.</span>
+      <span>Xây dựng bằng HTML · CSS · JavaScript thuần</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/subjects.js"></script>
+</body>
+</html>

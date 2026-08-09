@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giới thiệu - CodeDthu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span>CodeDthu<br><small>Hệ thống tổng hợp và luyện tập bài tập lập trình cho sinh viên Dthu</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Trang chủ</a>
+      <a href="subjects.html">Môn học</a>
+      <a href="about.html" class="active">Giới thiệu</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="darkModeToggle" title="Chế độ tối"><i class="fa-solid fa-moon"></i></button>
+      <button class="menu-toggle" id="menuToggle" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep">/</span><span>Giới thiệu</span></div>
+    <h1>Về CodeDthu</h1>
+    <p>Dự án phục vụ báo cáo và thuyết trình môn học, xây dựng bằng HTML/CSS/JavaScript thuần.</p>
+  </div>
+</section>
+
+<main class="section">
+  <div class="container">
+    <div class="panel" style="max-width:820px;margin-bottom:26px;">
+      <p style="margin:0 0 12px;line-height:1.7;color:var(--gray-700);">
+        <strong>CodeDthu</strong> là hệ thống tổng hợp và luyện tập bài tập lập trình dành cho sinh viên ngành Khoa học Máy tính,
+        ra đời nhằm giải quyết một vấn đề rất thực tế: bài tập của nhiều môn học có tính lập trình thường nằm rải rác ở nhiều nơi khác
+        nhau, khó tra cứu lại khi cần ôn tập theo chủ đề. Website tổng hợp bài tập của các môn học, cho phép
+        tìm kiếm, lọc và sắp xếp theo nhiều tiêu chí để sinh viên tiết kiệm thời gian tra cứu và tập trung vào việc luyện tập.
+      </p>
+    </div>
+
+    <div class="section-head" style="margin-bottom:14px;">
+      <h2>Công nghệ sử dụng</h2>
+    </div>
+    <div class="panel" style="max-width:820px;">
+      <ul style="display:flex;flex-direction:column;gap:10px;">
+        <li style="font-size:.9rem;color:var(--gray-700);"><i class="fa-brands fa-html5" style="color:var(--blue-600);width:20px;"></i> HTML5 - cấu trúc nội dung 5 trang: Trang chủ, Môn học, Chi tiết môn, Chi tiết bài tập, Giới thiệu.</li>
+        <li style="font-size:.9rem;color:var(--gray-700);"><i class="fa-brands fa-css3-alt" style="color:var(--blue-600);width:20px;"></i> CSS3 thuần - hệ thống biến màu, bố cục lưới (Grid/Flexbox), responsive cho Desktop/Tablet/Mobile.</li>
+        <li style="font-size:.9rem;color:var(--gray-700);"><i class="fa-brands fa-js" style="color:var(--blue-600);width:20px;"></i> JavaScript thuần - tìm kiếm, lọc, sắp xếp, phân trang, Dark Mode, LocalStorage cho Lịch sử xem.</li>
+        <li style="font-size:.9rem;color:var(--gray-700);"><i class="fa-solid fa-icons" style="color:var(--blue-600);width:20px;"></i> Font Awesome - hệ thống biểu tượng nhất quán trong toàn bộ giao diện.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>CodeDthu</h4>
+        <p>Hệ thống tổng hợp và luyện tập bài tập lập trình dành cho sinh viên Dthu, giúp bạn ôn tập theo môn học.</p>
+      </div>
+      <div>
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="subjects.html">Danh sách môn học</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CodeDthu — Đồ án thuyết trình môn học.</span>
+      <span>Xây dựng bằng HTML · CSS · JavaScript thuần</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeDthu - Hệ thống tổng hợp và luyện tập bài tập lập trình cho sinh viên Dthu</title>
+<meta name="description" content="CodeDthu - Hệ thống tổng hợp và luyện tập bài tập lập trình dành cho sinh viên Dthu, giúp bạn ôn tập theo môn học.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span>CodeDthu<br><small>Hệ thống tổng hợp và luyện tập bài tập lập trình cho sinh viên Dthu</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Trang chủ</a>
+      <a href="subjects.html">Môn học</a>
+      <a href="about.html">Giới thiệu</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="darkModeToggle" title="Chế độ tối"><i class="fa-solid fa-moon"></i></button>
+      <button class="menu-toggle" id="menuToggle" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= HERO / SEARCH ============================= -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Dành cho sinh viên Dthu</span>
+    <h1>Tìm bài tập đúng môn, đúng chủ đề,<br>đúng thứ bạn đang cần luyện tập.</h1>
+    <p class="lead">Tra cứu bài tập lập trình thuộc nhiều môn học, lọc theo độ khó, môn học.</p>
+
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" id="headerSearchInput" placeholder="Tìm bài tập, môn học hoặc chủ đề (VD: đệ quy, Cơ sở dữ liệu, mảng...)" autocomplete="off">
+      <button class="clear-icon" id="headerSearchClear"><i class="fa-solid fa-xmark"></i></button>
+      <div class="search-results-panel" id="headerSearchResults"></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+
+    <!-- ============================= DASHBOARD STATS ============================= -->
+    <section aria-label="Thống kê tổng quan">
+      <div class="stats-grid" id="statsGrid"></div>
+    </section>
+
+    <!-- ============================= MÔN HỌC NỔI BẬT ============================= -->
+    <section class="section" style="padding-top:0">
+      <div class="section-head">
+        <h2>Các môn học</h2>
+        <a class="see-all" href="subjects.html">Xem tất cả môn <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="subject-grid" id="homeSubjectGrid"></div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>CodeDthu</h4>
+        <p>Hệ thống tổng hợp và luyện tập bài tập lập trình dành cho sinh viên Dthu, giúp bạn ôn tập theo môn học.</p>
+      </div>
+      <div>
+        <h4>Điều hướng</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="subjects.html">Danh sách môn học</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CodeDthu — Đồ án thuyết trình môn học.</span>
+      <span>Xây dựng bằng HTML · CSS · JavaScript thuần</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" title="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
